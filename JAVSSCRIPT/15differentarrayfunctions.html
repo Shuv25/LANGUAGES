@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Manipulation</title>
+</head>
+
+<body>
+    <script>
+        var arr = [5, 6, 7, 8, 9];
+        arr.push(4); // Add element at the end of the array
+        document.write(arr, "<br>");
+
+        arr.pop(); // Remove element from the end of the array
+        document.write(arr, "<br>");
+
+        arr.shift(); // Remove element from the beginning of the array
+        document.write(arr, "<br>");
+
+        arr.unshift(3); // Add element at the beginning of the array
+        document.write(arr, "<br>");
+
+        arr.splice(1, 1); // Remove an element from index 1
+        document.write(arr, "<br>");
+
+        arr.splice(1, 0, 5); // Add an element at index 1 without removing any element
+        document.write(arr, "<br>");
+
+        var narr = arr.slice(0, 3); // Shallow copy of elements from index 0 to 2
+        document.write(narr, "<br>");
+
+        var nnarr = arr.concat(narr); // Concatenate two arrays
+        document.write(nnarr, "<br>");
+
+        arr.forEach(function (i) {
+            document.write(i + " ");
+        });
+        document.write("<br>");
+        //Creates a new array populated with the results of calling a provided function on every element in the calling array.
+        var db = arr.map(function (i) {
+            return i * 2;
+        });
+        document.write(db, "<br>");
+        // Creates a new array with all elements that pass the test implemented by the provided function.
+        var fi = arr.filter(function (i) {
+            return i % 2 === 0;
+        });
+        document.write(fi, "<br>");
+
+        var a=5;
+        document.write(Array.isArray(a),"<br>");
+        document.write(Array.isArray(arr), "<br>");
+        document.write(arr.indexOf(5), "<br>");
+        document.write(arr.lastIndexOf(5), "<br>");
+        document.write(arr.includes(5), "<br>");
+
+        function checkAdult(age)
+        {
+            return age>18;
+        }
+        document.write(arr.some(checkAdult));//it will check if any value is tru it will return true
+        document.write("<br>")
+        document.write(arr.every(checkAdult));//if  all the values true then return true
+        document.write("<br>")
+        document.write(arr.find(checkAdult));
+        document.write("<br>")
+        document.write(arr.findIndex(checkAdult));
+        document.write("<br>")
+        var s=arr.toString()
+        document.write(s,"<br>")
+        document.write(typeof s,"<br>");
+        arr.fill("Ram");
+        document.write(arr);
+    </script>
+</body>
+
+</html>

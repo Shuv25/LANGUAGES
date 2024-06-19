@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const tinder = {
+            name: "Shuv",
+            age: 23,
+            profession: 'Quant Researcher',
+            bodycount: 'Saving for my future lovely wife',
+            othernames: { names: ['lofi', 'fi'] }
+        };
+
+        document.write(JSON.stringify(tinder), "<br>");
+        document.write(tinder.othernames.names, "<br>");
+
+        const objone = { a: 7, b: 8 };
+        const objtwo = { c: 5, d: 9 };
+        const objthree = Object.assign({}, objone, objtwo);
+
+        document.write(JSON.stringify(objthree), "<br>");
+
+        const objfour = { e: 3, f: 7 };
+        const objfive = Object.assign({}, objone, objtwo, objthree, objfour);
+
+        document.write(JSON.stringify(objfive), "<br>");
+
+        const ex = [
+            {},
+            {},
+            {},
+            {},
+        ];
+
+        ex[0].email = ["example3@example.com", "example4@example.com"]; // Adding multiple email addresses to the first object
+        ex[1].names = ['Shuv', 'Raj']; // Adding names to the second object
+        ex[2].loc = ['Sapatgram', 'Vinland']; // Adding locations to the third object
+        ex[3].status = ['active', 'shut']; // Adding statuses to the fourth object
+
+        document.write(JSON.stringify(ex));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const mysym = Symbol("Mykeyone");
+        const a = {
+            name: 'Shuv',
+            id: 5,
+            [mysym]: "Mykeyone",
+            location: 'Jalandhar'
+        };
+
+        document.write(a["name"], "<br>");
+        document.write(a["id"], "<br>");
+        document.write(a["location"], "<br>");
+
+        a["name"] = "Sourav"; //updating
+        document.write(a["name"], "<br>");
+
+        a.greeting = function () {
+            return "Hello Everyone";
+        };
+        document.write(a.greeting(), "<br>");
+
+        a.status = 'Active'; // Corrected 'staus' to 'status'
+        document.write(JSON.stringify(a)); // Displaying object a as JSON string
+
+        document.write("<br>");
+        
+        a.hello=function()
+        {
+            document.write("Hello "+this.name);
+        }
+        a.hello();
+    </script>
+</body>
+
+</html>

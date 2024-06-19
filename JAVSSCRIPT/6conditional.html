@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a,b;
+        a=prompt("Enter the first no:");
+        b = prompt("Enter the second no:");
+
+        if(a<b)
+        {
+            document.write(a+" is smaller than "+b);
+        }
+        else if(a>b)
+        {
+            document.write(a + " is greater than " + b);
+        }
+        else
+        {
+            document.write("Both are same");
+        }
+
+        var x,y,z;
+        x=Number(prompt("Enter the first no:"));
+        y= Number(prompt("Enter the second no:"));
+        z= prompt("Enter the operator:");
+        switch(z)
+        {
+            case '+':
+                document.write("<br>");
+                document.write(x+y);
+                break;
+            case '-':
+                document.write("<br>");
+                document.write(x - y);
+                break;
+            case '*':
+                document.write("<br>");
+                document.write(x * y);
+                break;
+            case '/':
+                document.write("<br>");
+                document.write(x / y);
+                break;
+            case '**':
+                document.write("<br>");
+                document.write(x ** y);
+                break;
+            case '%':
+                document.write("<br>");
+                document.write(x % y);
+                break;
+            default:
+                document.write("<br>");
+                document.write("Please choose a valid operator");
+                break;
+        }
+    </script>
+</body>
+</html>

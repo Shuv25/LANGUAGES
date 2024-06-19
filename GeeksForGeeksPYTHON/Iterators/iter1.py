@@ -1,0 +1,14 @@
+a=['my','name','is','shuv']
+print(a)
+itr=iter(a)
+print(itr)
+print(next(itr))
+print(next(itr))
+print(next(itr))
+print()
+b=['hi','there','how','are','you?']
+nitr=reversed(b)
+print(next(nitr))
+print(next(nitr))
+print(next(nitr))
+print(next(nitr))
